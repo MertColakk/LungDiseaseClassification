@@ -94,7 +94,7 @@ This is the main page where users can upload their X-ray images.
 
 ### Result Page (Prediction Output)
 After uploading an image, users see the predicted class.  
-![Result Screenshot](path/to/resources/result_file.png)
+![Result Screenshot](resources/result_file.png)
 
 ---
 
