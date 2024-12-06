@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background: url('https://media.istockphoto.com/id/1388994501/photo/human-lungs-healthcare-and-medical-abstract-background.jpg?s=612x612&w=0&k=20&c=zjIdbOPrbKaxl2EBuMs-Cp320gDexMsWAX3bWWzGILY=') no-repeat center center fixed;
+            background-size: cover; /* Full screen background */
+            color: #00e1ff; /* Futuristic cyan glow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 10px #00e1ff;
+            margin-bottom: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00e1ff, 0 0 20px #00e1ff, 0 0 30px #00e1ff;
+            }
+            to {
+                text-shadow: 0 0 15px #56ff62, 0 0 25px #56ff62, 0 0 35px #56ff62;
+            }
+        }
+
+        form {
+            background: rgba(30, 30, 30, 0.8); /* Transparent form background */
+            border: 2px solid #00e1ff;
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 0 25px rgba(0, 225, 255, 0.7);
+            text-align: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            border: none;
+            background-color: #2c2c2c;
+            color: #00e1ff;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            background-color: #00e1ff;
+            border: none;
+            color: black;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: linear-gradient(45deg, #00e1ff, #56ff62);
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #56ff62, #00e1ff);
+            box-shadow: 0 0 15px #56ff62;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image for Prediction</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

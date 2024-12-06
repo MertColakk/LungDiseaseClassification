@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #121212; /* Black theme */
+            color: #00e1ff; /* Futuristic cyan glow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            position: absolute;
+            top: 10px; /* Positioned at the top center */
+            font-size: 2rem;
+            text-shadow: 0px 0px 8px #00e1ff;
+        }
+
+        p {
+            margin-top: 150px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #00e1ff, #56ff62);
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 225, 255, 0.5);
+            transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background: linear-gradient(45deg, #56ff62, #00e1ff);
+            box-shadow: 0 0 15px #56ff62;
+        }
+
+        /* Lung health visualization */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Human_Lungs_Front_View.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.1; /* Subtle lungs icon */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>Predicted Class: {{ prediction }}</p>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
