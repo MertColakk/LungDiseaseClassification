@@ -90,11 +90,11 @@ Data/
 
 ### Homepage (Image Upload Interface)
 This is the main page where users can upload their X-ray images.  
-![Homepage Screenshot](path/to/homepage_screenshot.png)
+![Homepage Screenshot](resources/upload_file.png)
 
 ### Result Page (Prediction Output)
 After uploading an image, users see the predicted class.  
-![Result Screenshot](path/to/result_screenshot.png)
+![Result Screenshot](path/to/resources/result_file.png)
 
 ---
 
